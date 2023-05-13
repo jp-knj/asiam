@@ -1,0 +1,36 @@
+body {
+  --white: #fafafa;
+  --sky: #00ccff;
+
+  --background: var(--sky);
+  --accent: var(--white);
+
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--accent);
+}
+
+.header {
+  border-block: 1px solid #242520;
+}
+
+.parallax {
+  overflow: hidden;
+  letter-spacing: -2px;
+  line-height: 0.8;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.scroller {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 64px;
+  display: flex;
+}
+
+.span {
+  margin-right: 30px;
+}

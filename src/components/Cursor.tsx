@@ -1,7 +1,6 @@
 import React, { useRef, useMemo } from "react";
 import useMouse from "@react-hook/mouse-position";
 import { motion } from "framer-motion";
-import "./cursor.css";
 
 const Cursor = ({ children }: { children: React.ReactNode }) => {
   const ref = useRef(null);
@@ -37,8 +36,8 @@ const Cursor = ({ children }: { children: React.ReactNode }) => {
     damping: 28,
   };
 
-    return (
-    <div className="wrap" ref={ref}>
+  return (
+    <div ref={ref}>
       <motion.div
         /* @ts-ignore */
         variants={variants}
@@ -49,6 +48,6 @@ const Cursor = ({ children }: { children: React.ReactNode }) => {
       {children}
     </div>
   );
-}
+};
 
 export default Cursor;

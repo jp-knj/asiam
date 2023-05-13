@@ -1,14 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.tsx";
+import ParallaxText from "../components/ParallaxText.tsx";
 import Cursor from "../components/Cursor";
 import "../styles/destyle.css";
 ---
 
 <Layout>
-  <Cursor client:load>
-    <Header />
-    <p>Click anywhere to start.</p>
-    <h2>Welcome to Astro.</h2>
-  </Cursor>
+  <div class="wrap">
+    <Cursor client:load>
+      <ParallaxText client:load />
+      <p>Click anywhere to start.</p>
+      <h2>Welcome to Astro.</h2>
+    </Cursor>
+  </div>
 </Layout>
+<style>
+  .wrap {
+    min-height: 300vh;
+    overflow-x: hidden;
+    max-width: 1080px;
+    margin-inline: auto;
+    border: 1px solid #242520;
+  }
+</style>
