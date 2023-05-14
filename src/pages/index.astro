@@ -32,26 +32,49 @@ import "../styles/destyle.css";
       </div>
       <div></div>
       <div></div>
-      <section>
-        <ol>
-            <li>
-                <article>
-                    <h5>Title of the article</h5>
-                    <p>
-                        Omar is a frontend developer with a passion for building things that
-                        live on the internet. He develop exceptional websites and web apps
-                    </p>
-                </article>
-            </li>
-            <li>
-                <article>
-                    <h5>Another title</h5>
-                    <p>Some other content...</p>
-                </article>
-            </li>
-        </ol>
-      </section>
     </main>
+    <section class="section">
+      <ol>
+        <li>
+          <article>
+            <h5>Title of the article</h5>
+            <p>
+              Omar is a frontend developer with a passion for building things
+              that live on the internet. He develop exceptional websites and web
+              apps
+            </p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h5>Another title</h5>
+            <p>
+              Omar is a frontend developer with a passion for building things
+              that live on the internet. He develop exceptional websites and web
+              apps that provide intuitive, pixel-perfect user interfaces with
+              efficient and modern backends.
+            </p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h5>Another title</h5>
+            <p>
+              Omar is a frontend developer with a passion for building things
+              that live on the internet. He develop exceptional websites and web
+              apps that provide intuitive, pixel-perfect user interfaces with
+              efficient and modern backends..
+            </p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h5>Another title</h5>
+            <p>Some other content...</p>
+          </article>
+        </li>
+      </ol>
+    </section>
     <footer>
       <p>Let's work together!</p>
       <p>Designed & built by Tomita Kenji</p>
@@ -101,16 +124,29 @@ import "../styles/destyle.css";
   main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 400px 400px;
+    grid-template-rows: 400px;
     border-block: 4px solid #242520;
   }
   main > div {
-    border-bottom: 4px solid #242520;
     padding: 2rem;
   }
   main > div:not(:first-child) {
     border-left: 4px solid #242520;
     padding: 2rem;
+  }
+  .section {
+    display: block;
+    padding: 24px;
+  }
+  article {
+    padding-block: 2rem;
+  }
+  ol {
+    display: grid;
+    gap: 24px;
+  }
+  ol > li:not(:last-child) {
+    border-bottom: 1px solid #242520;
   }
   footer {
     border-block: 1px solid #242520;
