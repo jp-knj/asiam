@@ -6,7 +6,9 @@ import "../styles/destyle.css";
 
 <Layout>
   <div class="wrap">
-    <ParallaxText client:load />
+    <div>
+      <ParallaxText client:load />
+    </div>
     <section>
       <div></div>
       <div>
@@ -22,21 +24,23 @@ import "../styles/destyle.css";
     </section>
     <main>
       <div>
-        <h4>My Skills</h4>
+        <h4>Have interested in</h4>
         <p>
-          Omar is a frontend developer with a passion for building things that
-          live on the internet. He develop exceptional websites and web apps
-          that provide intuitive, pixel-perfect user interfaces with efficient
-          and modern backends.
+          I have a deep passion for User Interface (UI) design, particularly
+          when it comes to designing effective and intuitive user flows.
+          Understanding the journey that users take through an application or
+          website is fundamental to creating a successful digital experience,
+          and this is an aspect of UI design that I find both fascinating and
+          rewarding.
         </p>
       </div>
       <div>
-        <h4>My Skills</h4>
+        <h4>Development</h4>
         <p>
-          Omar is a frontend developer with a passion for building things that
-          live on the internet. He develop exceptional websites and web apps
-          that provide intuitive, pixel-perfect user interfaces with efficient
-          and modern backends.
+          I have honed my skills in development with a strong emphasis on using
+          React for front-end development. I have a deep understanding of React
+          component-based architecture, which allows me to build reusable and
+          efficient components to streamline the development process.
         </p>
       </div>
       <div>
@@ -100,11 +104,15 @@ import "../styles/destyle.css";
 <style>
   .wrap {
     margin-block: 24px;
-    overflow-x: hidden;
     max-width: 1080px;
     margin-inline: auto;
-    border: 4px solid #242520;
+    border-inline: 4px solid #242520;
     border-radius: 24px;
+  }
+  .wrap > div:first-child {
+    background-color: #00ccff;
+    position: sticky;
+    top: 24px;
   }
   section {
     display: grid;
@@ -129,7 +137,14 @@ import "../styles/destyle.css";
     font-size: 24px;
     font-weight: 400;
     line-height: 1.2;
-    color: yellow;
+    color: gold;
+  }
+  h4 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: white;
+    background-color: gold;
   }
   p {
     font-size: 16px;
@@ -165,11 +180,15 @@ import "../styles/destyle.css";
     border-bottom: 1px solid #242520;
   }
   footer {
-    border-block: 1px solid #242520;
+    border-block: 4px solid #242520;
     padding-block: 2rem;
     padding-inline-start: 2rem;
     background-color: #fafafa;
+    height: 200px;
     color: #00ccff;
+    border-bottom: 4px solid #242520;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
   }
   footer p {
     font-size: 16px;

@@ -20,7 +20,7 @@ type ParallaxProps = {
 function ParallaxText({
   children,
   baseVelocity = 100,
-  repeat = 4,
+  repeat = 6,
 }: ParallaxProps) {
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
@@ -72,12 +72,9 @@ function ParallaxText({
 export default function App() {
   return (
     <header className="header">
-      <ParallaxText baseVelocity={-5} repeat={4}>
-        Framer Motion
-      </ParallaxText>
-      <ParallaxText baseVelocity={5} repeat={3}>
-        Scroll velocity
-      </ParallaxText>
+      <ParallaxText baseVelocity={-5}>Framer Motion</ParallaxText>
+      <ParallaxText baseVelocity={-1}>Kenji Tomita</ParallaxText>
+      <ParallaxText baseVelocity={5}>Scroll velocity</ParallaxText>
     </header>
   );
 }
