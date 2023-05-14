@@ -1,25 +1,128 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ParallaxText from "../components/ParallaxText.tsx";
-import Cursor from "../components/Cursor";
 import "../styles/destyle.css";
 ---
 
 <Layout>
   <div class="wrap">
-    <Cursor client:load>
-      <ParallaxText client:load />
-      <p>Click anywhere to start.</p>
-      <h2>Welcome to Astro.</h2>
-    </Cursor>
+    <ParallaxText client:load />
+    <section>
+      <div></div>
+      <div>
+        <span>Hello World</span>
+        <h2>Tomita Kenji</h2>
+        <h3>Frontend Developer</h3>
+        <p>
+          Omar likes to make fun, interactive things with code. <br /> He gets particularly
+          excited when these things involve working with others to make an even bigger
+          impact.
+        </p>
+      </div>
+    </section>
+    <main>
+      <div>
+        <h4>My Skills</h4>
+        <p>
+          Omar is a frontend developer with a passion for building things that
+          live on the internet. He develop exceptional websites and web apps
+          that provide intuitive, pixel-perfect user interfaces with efficient
+          and modern backends.
+        </p>
+      </div>
+      <div></div>
+      <div></div>
+      <section>
+        <ol>
+            <li>
+                <article>
+                    <h5>Title of the article</h5>
+                    <p>
+                        Omar is a frontend developer with a passion for building things that
+                        live on the internet. He develop exceptional websites and web apps
+                    </p>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <h5>Another title</h5>
+                    <p>Some other content...</p>
+                </article>
+            </li>
+        </ol>
+      </section>
+    </main>
+    <footer>
+      <p>Let's work together!</p>
+      <p>Designed & built by Tomita Kenji</p>
+    </footer>
   </div>
 </Layout>
 <style>
   .wrap {
-    min-height: 300vh;
+    margin-block: 24px;
     overflow-x: hidden;
     max-width: 1080px;
     margin-inline: auto;
-    border: 1px solid #242520;
+    border: 4px solid #242520;
+    border-radius: 24px;
+  }
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  section > div:not(:first-child) {
+    border-left: 4px solid #242520;
+    padding: 2rem;
+    display: grid;
+    gap: 24px;
+  }
+  span {
+    font-size: 2vw;
+  }
+  h2 {
+    font-size: 6vw;
+    letter-spacing: 2px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  h3 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: yellow;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #fff;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 400px 400px;
+    border-block: 4px solid #242520;
+  }
+  main > div {
+    border-bottom: 4px solid #242520;
+    padding: 2rem;
+  }
+  main > div:not(:first-child) {
+    border-left: 4px solid #242520;
+    padding: 2rem;
+  }
+  footer {
+    border-block: 1px solid #242520;
+    padding-block: 2rem;
+    padding-inline-start: 2rem;
+    background-color: #fafafa;
+    color: #00ccff;
+  }
+  footer p {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.8;
+    color: #00ccff;
   }
 </style>
