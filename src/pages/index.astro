@@ -1,5 +1,6 @@
 ---
 import "../styles/destyle.css";
+import Logo from "../ui/Logo";
 ---
 
 <!DOCTYPE html>
@@ -8,13 +9,15 @@ import "../styles/destyle.css";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JP-KNJ</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="wrapper">
       <div class="container">
         <div class="header-wrapper">
-          <header class="header"></header>
+          <header class="header">
+            <Logo client:load />
+          </header>
         </div>
         <main class="main">
           <h1>Hello, Astro!</h1>
@@ -30,7 +33,7 @@ import "../styles/destyle.css";
     --border-radius: 24px;
   }
   body {
-    font-family: "Montserrat";
+    font-family: 'Montserrat', sans-serif;
   }
   .wrapper {
     display: flex;
