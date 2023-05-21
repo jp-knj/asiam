@@ -1,5 +1,6 @@
 ---
 import "../styles/destyle.css";
+import Cursor from "../ui/Cursor/Cursor";
 import Logo from "../ui/Logo/Logo";
 import NavigationBar from "../ui/NavigationBar/NavigationBar.astro";
 ---
@@ -16,6 +17,7 @@ import NavigationBar from "../ui/NavigationBar/NavigationBar.astro";
     />
   </head>
   <body>
+    <Cursor client:load />
     <div class="wrapper">
       <div class="container">
         <div class="header-wrapper">
@@ -58,7 +60,6 @@ import NavigationBar from "../ui/NavigationBar/NavigationBar.astro";
   }
   @media (max-width: 1080px) {
     .wrapper {
-      <!--todo: PCの場合はpaddingを入れる-->;
     }
   }
   .container {
