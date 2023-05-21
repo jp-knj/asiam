@@ -12,11 +12,18 @@ import {
 import styles from "./logo.module.css";
 
 type ParallaxProps = {
-  children: string;
+  children: React.ReactNode;
   baseVelocity: number;
   repeat?: number;
 };
 
+const Logo = () => (
+  <div className={styles.logo}>
+    <ParallaxText baseVelocity={-5}>jp-knj</ParallaxText>
+    <ParallaxHeading baseVelocity={-1}>jp-knj</ParallaxHeading>
+    <ParallaxText baseVelocity={5}>jp-knj</ParallaxText>
+  </div>
+);
 const ParallaxHeading = ({
   children,
   baseVelocity = 100,
@@ -122,12 +129,5 @@ const ParallaxText = ({
     </div>
   );
 };
-const Logo = () => (
-  <div className="logo">
-    <ParallaxText baseVelocity={-5}>jp-knj</ParallaxText>
-    <ParallaxHeading baseVelocity={-1}>jp-knj</ParallaxHeading>
-    <ParallaxText baseVelocity={5}>jp-knj</ParallaxText>
-  </div>
-);
 
 export default Logo;
