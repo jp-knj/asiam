@@ -38,6 +38,13 @@ import NavigationBar from "../ui/NavigationBar/NavigationBar.astro";
               </p>
             </div>
           </div>
+          <section class="section">
+            <p>
+              I was born amidst the never-ending frenzy of content in modern day
+              Japan. Spending my days distraught, I looked to the Internet for
+              an oasis, and reconnected with my roots.
+            </p>
+          </section>
         </main>
         <footer class="footer"></footer>
       </div>
@@ -68,7 +75,6 @@ import NavigationBar from "../ui/NavigationBar/NavigationBar.astro";
   }
   @media (min-width: 1080px) {
     .container {
-      <!--todo: PCの場合はpaddingを入れる-->;
     }
   }
   .header-wrapper {
@@ -97,8 +103,9 @@ import NavigationBar from "../ui/NavigationBar/NavigationBar.astro";
   }
   .main-box {
     display: grid;
-    gap: 16px;
-    padding: 8px;
+    gap: 24px;
+    padding-block: 36px;
+    padding-inline: 8px;
   }
   .image {
     width: 100%;
@@ -113,6 +120,11 @@ import NavigationBar from "../ui/NavigationBar/NavigationBar.astro";
     font-size: clamp(16px, 2vw, 24px);
     line-height: 1.5;
     letter-spacing: 1px;
+  }
+  .section {
+    padding-block: 36px;
+    padding-inline: 8px;
+    border-top: 4px solid var(--color-black);
   }
   .footer {
     border-bottom-left-radius: var(--border-radius);
