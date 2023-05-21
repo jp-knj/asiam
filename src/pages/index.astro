@@ -1,6 +1,7 @@
 ---
 import "../styles/destyle.css";
 import Logo from "../ui/Logo/Logo";
+import NavigationBar from "../ui/NavigationBar/NavigationBar.astro";
 ---
 
 <!DOCTYPE html>
@@ -20,6 +21,7 @@ import Logo from "../ui/Logo/Logo";
         <div class="header-wrapper">
           <header class="header">
             <Logo client:load />
+            <NavigationBar />
           </header>
         </div>
         <main class="main">
